@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/role?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: admin123456
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+
+# JWT配置
+jwt:
+  secret: mySecret
+  # 头部
+  header: Authorization
+  # token有效时间
+  expiration: 604800
+  # token头部
+  tokenHead: Bearer
